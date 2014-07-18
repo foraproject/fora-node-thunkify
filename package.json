@@ -1,0 +1,16 @@
+{
+    "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
+    "name": "fora-node-thunkify",
+    "version": "0.0.1",
+    "description": "A fork of visionmedia/node-thunkify that supports delegating yield for better error reporting.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeswin/fora-node-thunkify.git"
+    },
+    "main": "dist",
+    "dependencies": {},
+    "devDependencies": {},
+    "engines": { "node": ">= 0.11.9" },
+    "keywords": ["async, generators, flow-control"],
+    "license" : "GPL-3.0+"
+}
