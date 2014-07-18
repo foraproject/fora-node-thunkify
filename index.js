@@ -1,4 +1,4 @@
-window.exports = function thunkify(fn){
+module.exports = function thunkify(fn){
   var result = function(){
     var args = new Array(arguments.length);
     var ctx = this;
