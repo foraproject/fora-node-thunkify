@@ -1,5 +1,5 @@
 module.exports = function thunkify(fn){
-  var result = function(){
+  var thunkFn = function(){
     var args = new Array(arguments.length);
     var ctx = this;
 
@@ -26,7 +26,7 @@ module.exports = function thunkify(fn){
 
   return function*() {
     try {
-        yield result(arguments);
+        yield thunkFn.call(this, arguments);
     } catch(e) {
         e._inner = new Error();
         throw e;
