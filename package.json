@@ -1,7 +1,7 @@
 {
     "author": "Jeswin Kumar <jeswinpk@agilehead.com>",
     "name": "fora-node-thunkify",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A fork of visionmedia/node-thunkify that supports delegating yield for better error reporting.",
     "repository": {
         "type": "git",

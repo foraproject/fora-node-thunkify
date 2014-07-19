@@ -26,7 +26,7 @@ module.exports = function thunkify(fn){
 
   return function*() {
     try {
-        yield thunkFn.call(this, arguments);
+        return yield thunkFn.call(this, arguments);
     } catch(e) {
         e._inner = new Error();
         throw e;
