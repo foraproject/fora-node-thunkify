@@ -1,11 +1,7 @@
 module.exports = function thunkify(fn){
   var thunkFn = function(){
-    var args = new Array(arguments.length);
+    var args = Array.prototype.slice.call(arguments);
     var ctx = this;
-
-    for(var i = 0; i < args.length; ++i) {
-      args[i] = arguments[i];
-    }
 
     return function(done){
       var called;
@@ -26,7 +22,8 @@ module.exports = function thunkify(fn){
 
   return function*() {
     try {
-        return yield thunkFn.call(this, arguments);
+        var args = Array.prototype.slice.call(arguments);
+        return yield thunkFn.apply(this, args);
     } catch(e) {
         e._inner = new Error();
         throw e;
